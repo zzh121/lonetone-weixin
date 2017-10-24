@@ -1,0 +1,4 @@
+写入时间2017-09-30 13:20:01	carNum沪b12121	indate2017-09-30 12:00:00	c_type0	indoorid1
+写入时间2017-09-30 13:20:41	carNum沪b12121	indate2017-09-30 12:00:00	c_type临时用户	indoorid1
+写入时间2017-09-30 13:26:11	carNum沪b12121	indate2017-09-30 12:00:00	c_type临时用户	indoorid1
+写入时间2017-09-30 13:34:29	carNum沪b12121	indate2017-09-30 12:00:00	c_type临时用户	indoorid1
