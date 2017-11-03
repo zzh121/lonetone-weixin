@@ -10,21 +10,37 @@ require 'curlCenter.class.php';
 // $arr['fee']  = 20;
 // $arr['mobile'] = 1234567890;
 
-$arr['carNo'] = '鄂EF7284';
-$arr['indate'] = '';
-$arr['Signdata'] = [
-					'tmptime'=>'',
-					'randomStr'=>'',
-					'sign'=>''
 
-				];
-$url = "http://192.168.1.252:8080/fee";
+// {\"listEffect\":[{\"carNo\":\"预A123456\",\"bookTime\":\"2017-10-30 00:00:00\",\"bookMoney\":\"10\",\"timePoint\":\"2017-10-30 12:00:00\"},{\"carNo\":\"预A123456\",\"bookTime\":\"2017-10-30 10:52:57\",\"bookMoney\":\"10\",\"timePoint\":\"2017-10-30 12:00:00\"}],\"signData\":{\"tmptime\":\"1509334180\",\"randomStr\":\"58GgsCD9I\",\"sign\":\"A3063005FD9499E60C458C234C5AA8FA\"},\"flag\":\"longtone2.com\"}"
 
-// $curl = new curlCenter();
+//测试入库
+// $arr['carNo'] = '测试111111';
+// $arr['indate'] = '';
+// $arr['Signdata'] = [
+// 					'tmptime'=>'',
+// 					'randomStr'=>'',
+// 					'sign'=>''
 
-// $res = $curl->doPost($url,$arr);
+// 				];
+// 				
+	
+	//测试预约支付
+	$arr['listEffect'] = [	0=>[
+								'carNo'=>'预约支付信息',
+								'bookTime'=>'2017-10-30 00:00:00',
+								'bookMoney'=>'10'
+							]
+					];
+	$arr['signData'] = [
+						'tmptime'=>'1509334180',
+						'randomStr'=>'58GgsCD9I',
+						'sign'=>'A3063005FD9499E60C458C234C5AA8FA'
+					];
+	$arr['flag'] = 'longtone2.com';
 
-// print_r($res);
+$url = "http://192.168.1.210/longtone2017/weixin.php/Api/getWaitBook";
+
+
 
 $ch = curl_init();
 
